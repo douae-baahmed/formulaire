@@ -18,48 +18,7 @@ $erreurs   = [];
 </head>
 <body>
 
-<form  method="post">
 
-<label>prenom :
-    <input type="text" name="prenom" >
-</label>
-
-<label>nom :
-    <input type="text" name="nom" >
-</label>
-
-<label> email :
-    <input type="email" name="email">
-</label>
-
-<label>age :
-    <input type="number" name="age" >
-</label>
-
-<label> filiere :
-    <select name="filiere">
-        <option value=""></option>
-        <option value="info" >Informatique</option>
-        <option value="elec" >Électronique</option>
-        <option value="meca" >Mécanique</option>
-        <option value="autre" >Autre</option>
-    </select>
-</label>
-
-<label>lettre de motivation :
-    <textarea name="motivation" rows="6"></textarea>
-</label>
-
-<label>
-    <input type="checkbox" name="reglement" value="1" >
-    J'ai lu et j'accepte le règlement du club.
-</label>
-
-
-
-<button type="submit">Envoyer ma candidature</button>
-
-</form>
     
 </body>
 </html>
