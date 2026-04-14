@@ -17,6 +17,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $filiere    = $_POST['filiere']    ?? '';
     $motivation = $_POST['motivation'] ?? '';
     $reglement  = isset($_POST['reglement']);
+      if (empty($prenom)) {
+        $erreurs[] = "Le prenom est obligatoire.";
+    }
+    if (empty($nom)) {
+        $erreurs[] = "Le nom est obligatoire.";
+    }
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $erreurs[] = "Email invalide.";
+    }
+    if (!is_numeric($age) || $age < 16 || $age > 30) {
+        $erreurs[] = "Age entre 16 et 30.";
+    }
+    if (empty($filiere)) {
+        $erreurs[] = "Choisir une filière.";
+    }
+    if (strlen($motivation) < 30) {
+        $erreurs[] = "Motivation min 30 caractères.";
+    }
+    if (!$reglement) {
+        $erreurs[] = "Vous devez accepter le règlement.";
+    }
 }
 ?>
 <!DOCTYPE html>
