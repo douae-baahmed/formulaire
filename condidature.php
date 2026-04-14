@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     J'ai lu et j'accepte le règlement du club.
 </label>
 
-<br><br>
+
 
 <button type="submit">Envoyer ma candidature</button>
 
