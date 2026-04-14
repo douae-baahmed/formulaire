@@ -49,6 +49,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <?php if (!empty($erreurs)): ?>
+    <ul class="erreurs">
+        <?php foreach ($erreurs as $e): ?>
+            <li><?php echo $e; ?></li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
 <form  method="post">
 
 <label>prenom :
